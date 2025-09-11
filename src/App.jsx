@@ -9,7 +9,7 @@ function App() {
   }, []);
 
   async function fetchProducts() {
-  const res = await fetch("https://api-e-commerace-in-node-js.onrender.com/product/all");
+  const res = await fetch("/api/products");
   const data = await res.json();
   setProducts(data);
 }
