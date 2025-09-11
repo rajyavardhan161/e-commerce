@@ -8,11 +8,18 @@ function App() {
     fetchProducts();
   }, []);
 
-  async function fetchProducts() {
-  const res = await fetch("/api/products");
+ async function fetchProducts() {
+  // local development aur Vercel production ke liye alag URL
+  const url =
+    process.env.NODE_ENV === "development"
+      ? "https://api-e-commerace-in-node-js.onrender.com/product/all" // local ya dev
+      : "/api/products"; // deployed Vercel proxy
+
+  const res = await fetch(url);
   const data = await res.json();
   setProducts(data);
 }
+
 
   return (
    <div>
