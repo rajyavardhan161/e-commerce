@@ -5,7 +5,7 @@ import Blog from "./items/blog.jsx";
 import Cart from "./items/cart.jsx";
 import Contact from "./items/contact.jsx";
 import Header from "./Header.jsx";
-import SingleProduct from "./SingleProduct.jsx";
+import SingleProduct from "./singleproduct.jsx";
 
 function Home() {
   return (
