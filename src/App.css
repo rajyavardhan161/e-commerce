@@ -9,10 +9,10 @@
 .imp {
   text-align: center;
 }
-.header h1 {
+header h1 {
   color: white;
 }
-.header {
+header {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -23,14 +23,19 @@
   padding: 0 20px;
   margin-bottom: 40px;
 }
-.manu {
+ul {
   display: flex;
   justify-content: center;
   align-items: center;
 } 
-.manu p {
+ul li {
+  list-style: none ;
+}
+ul li a {
   padding: 16px;
   font-size: 18px;
+  text-decoration: none;
+  color: white;
 }
 .main {
   display: flex;
