@@ -9,9 +9,8 @@ function App() {
   }, []);
 
   async function fetchProducts() {
-  const res = await fetch("https://api-e-commerace-in-node-js.onrender.com/product/all");
+  const res = await fetch("https://fakestoreapi.com/products");
   const data = await res.json();
-  console.log(data);
   setProducts(data);
   console.log(data);
 }
@@ -23,11 +22,9 @@ function App() {
     {products.map(item => (
       <div key={item._id} className="productitem">
         <img src={item.image} />
-        <h3>Name: {item.name}</h3>
+        <h3>Name: {item.title}</h3>
         <h4>Category: {item.category}</h4>
-        <p>Price: ₹{item.originalPrice}</p>
-        <p> Discount Price: ₹{item.discountedPrice}</p>
-        
+        <p>Price: ₹{item.price}</p>
       </div>
     ))}
   </div>
