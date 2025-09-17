@@ -9,9 +9,6 @@
 .imp {
   text-align: center;
 }
-header h1 {
-  color: white;
-}
 header {
   width: 100%;
   display: flex;
@@ -22,6 +19,13 @@ header {
   height: 80px;
   padding: 0 20px;
   margin-bottom: 40px;
+}
+header h1 a {
+  text-decoration: none;
+  color: white;
+  font-size: 26px;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 ul {
   display: flex;
@@ -124,4 +128,21 @@ ul li a:hover {
   text-decoration: none;
   color: #007bff;
   font-weight: bold;
+}
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 15px;
+  }
+  header h1 {
+    margin-bottom: 10px;
+  }
+  ul {
+    flex-direction: column;
+  }
+  ul li a {
+    font-size: 16px;
+    padding: 8px;
+  }
 }
