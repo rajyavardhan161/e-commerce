@@ -11,9 +11,9 @@ function App() {
   async function fetchProducts() {
   const res = await fetch("https://api-e-commerace-in-node-js.onrender.com/product/all");
   const data = await res.json();
+  console.log(data);
   setProducts(data);
   console.log(data);
-  
 }
 
   return (
